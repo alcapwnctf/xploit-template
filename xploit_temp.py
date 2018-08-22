@@ -43,8 +43,8 @@ if __name__=="__main__":
         exploit(r)
     else:
         LOCAL = True
-        r = process(BINARY)#,env={'LD_PRELOAD':LIB) #remove the ')#'
-        print util.proc.pidof(r)
+        r = process(BINARY)#,env={'LD_PRELOAD':LIB}) #remove the ')#'
+        print (util.proc.pidof(r))
         pause()
         exploit(r)'''
 
