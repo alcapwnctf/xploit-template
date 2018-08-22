@@ -21,6 +21,23 @@ def args_main():
 
 if __name__=="__main__":
     code='''#!/usr/bin/python2
+
+# some helpful urls
+# https://github.com/Naetw/CTF-pwn-tips
+# http://ctfhacker.com/ctf/pwnable/2015/08/18/campctf-bitterman.html
+# https://github.com/nnamon/linux-exploitation-course
+
+# some certain helpful pwntools commands
+
+# system_off = libc.symbols['system']
+# binsh = next(libc.search('/bin/sh\\x00'))
+# rop2.system(next(libc.search('/bin/sh\\x00'))) and print rop2.dump()
+
+# elf = ELF('./binary')
+# rop = ROP(elf)
+# rop.puts(elf.got['puts'])
+# rop.call(elf.symbols['main'])
+
 from pwn import *
 import sys
 
@@ -37,6 +54,8 @@ def exploit(r):
 if __name__=="__main__":
     #binary = ELF(BINARY, checksec = False)
     #lib = ELF(LIB, checksec = False)
+    #rop = ROP(lib)
+
     if len(sys.argv) > 1:
         LOCAL = False
         r = remote(HOST, PORT)
