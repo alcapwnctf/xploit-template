@@ -40,7 +40,8 @@ if __name__=="__main__":
 
 from pwn import *
 import sys
-
+#context(arch='amd64', os='linux', endian='little')
+#http://docs.pwntools.com/en/stable/context.html?highlight=context#pwnlib.context.ContextType.architectures
 LOCAL = True
 
 '''
