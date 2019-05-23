@@ -38,10 +38,13 @@ if __name__=="__main__":
 # rop.puts(elf.got['puts'])
 # rop.call(elf.symbols['main'])
 
+#http://docs.pwntools.com/en/stable/context.html?highlight=context#pwnlib.context.ContextType.architectures
+
 from pwn import *
 import sys
+
 #context(arch='amd64', os='linux', endian='little')
-#http://docs.pwntools.com/en/stable/context.html?highlight=context#pwnlib.context.ContextType.architectures
+
 LOCAL = True
 
 '''
