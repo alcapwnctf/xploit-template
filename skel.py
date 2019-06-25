@@ -30,7 +30,7 @@ TEMPLATE="""#!/usr/bin/env python2
 
 #http://docs.pwntools.com/en/stable/context.html?highlight=context#pwnlib.context.ContextType.architectures
 
-import sys
+import sys,os
 from pwn import *
 
 context.update(arch="{arch}", endian="{endian}", os="linux", )
@@ -48,6 +48,9 @@ e = ELF(TARGET, False)
 def exploit(r):
 
     r.interactive()
+    payload=""
+    payload+=""
+    r.sendline(payload)
     return
 
 if __name__ == "__main__":
