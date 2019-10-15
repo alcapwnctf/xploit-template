@@ -43,7 +43,7 @@ TARGET=os.path.realpath("{filepath}")
 LIBRARY=""
 
 e = ELF(TARGET, False)
-# l = ELF(LIBRARY, False)
+# libc = ELF(LIBRARY, False)
 
 def exploit(r):
 
